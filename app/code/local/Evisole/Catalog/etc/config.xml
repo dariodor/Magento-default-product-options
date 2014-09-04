@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Evisole_Catalog>
+            <version>1.0.0</version>
+        </Evisole_Catalog>
+    </modules>
+ 
+    <global>
+ 
+        <models>
+            <evisole_catalog>
+                 <class>Evisole_Catalog_Model</class>
+            </evisole_catalog>
+        </models>
+ 
+        <events>
+            <catalog_product_new_action>
+                <observers>
+                  <evisole_catalog_product_observer>
+                    <type>singleton</type>
+                    <class>evisole_catalog/product_observer</class>
+                    <method>catalog_product_new_action</method>
+                  </evisole_catalog_product_observer>
+                </observers>
+            </catalog_product_new_action>
+        </events>
+ 
+    </global>
+</config>
